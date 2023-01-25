@@ -1,0 +1,52 @@
+body{
+    width:100%;
+    padding-right:0rem;
+    padding-top:16rem;
+    
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+    margin-right : 0rem;
+   
+    
+}
+
+.images2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+
+
+
+
+.arrows a, active{
+    color:aquamarine
+}
+
+.arrows:hover a {
+
+    color:black;
+}
+
+.arrows{
+    width: 5rem;
+    height : 5rem;
+    padding-top: 4rem;
+
+
+}
+
+.arrows:hover{
+    width: 6rem;
+    height: 6rem;
+    transition: width 0.5s ease;
+    
+
+}
