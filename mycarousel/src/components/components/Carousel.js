@@ -239,6 +239,9 @@ const MAXCOUNT = 100;
             //image1
             console.log(this.storageOfStartNode);
 
+            
+            
+            let storedValue  = vectorOfElements[0];
             //Fills all but 4th imas index 3
             for (let i = 0; i <= (5) ; i++ )
             {      //all values but start move right to left replacing earlier node with farther along node
@@ -249,8 +252,9 @@ const MAXCOUNT = 100;
             
             }
 
-            vectorOfElements[5] = this.storageOfStartNode;
-
+            this.storageOfStartNode = '2';
+            //vectorOfElements[5] = this.storageOfStartNode;
+            vectorOfElements[5] = storedValue;
             console.log("here");
            
 
@@ -258,6 +262,8 @@ const MAXCOUNT = 100;
             
             //vectorOfElements[6] = "/image9.png";//this.storageOfStartNode;
             console.log(vectorOfElements);
+
+            
 
             
         }
