@@ -2,13 +2,14 @@
 //import { NavigationContainer, } from './navigation.styles.jsx';
 //import Header from '../../header_done.js'
 import Carousel from "./Carousel.js" 
+//import ArrayPush from "./ArrayPush.jsx"
 
-
-const Navigation = () => {
+const Navigation1 = () => {
 return (
 
 <div style = {{maxWidth: 200, marginRight: 'auto', marginLeft: "auto", marginTop: 64}}>
 <Carousel>
+
 
 
 
@@ -18,7 +19,7 @@ return (
 )
 }
 
-export default Navigation;
+export default Navigation1;
 
   
  

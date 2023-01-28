@@ -79,6 +79,8 @@ const MAXCOUNT = 100;
 
 
         alert("here");
+        operations();
+
         
         //console.log("here");
         //console.log(i);
@@ -172,13 +174,156 @@ const MAXCOUNT = 100;
         a2 = A2();
         a3 = A3();
 
-        a0 = A1();
-        a1= A2();
-        a2 = A3();
-        a3 = A4();
+        //a0 = A1();
+        //a1= A2();
+        //a2 = A3();
+        //a3 = A4();
 
 
-/*
+        
+        let vectorOfElements= [] ;
+        let storageArray = [0,0,0,0];
+        
+        class vector
+        {
+        constructor()
+        {
+            this.startingIndex = 0;
+            this.endingIndex = 3;
+            this.lengthOfArray=  0;    
+            this.storageArray = [];   
+            this.storageOfStartNode = '1';
+            
+        }
+        getArrayLength()
+        {
+            this.lengthOfArray = vectorOfElements.length ;
+            return(this.lengthOfArray);
+        }
+        getValueOfEndNode()
+        {
+            //let lastNode = vectorOfElements[this.lengthOfArray]; 
+            //return(lastNode);
+
+        }
+        getValueofStartNode()
+        {
+            let storedfirstNode = vectorOfElements[0];
+            return(this.storedfirstNode);
+        }
+
+        //pushes for initilaization from left to right
+        pushVector(element1){
+            vectorOfElements.push(element1);
+            //return(vectorOfElements);
+            //console.log(element1);
+        }
+        
+        
+        
+        
+        
+        moveElementsOfArrayLeft()
+        {
+            let arrayLength = this.getArrayLength();
+            
+            
+            
+           alert(this.storageOfStartNode);
+
+
+
+            
+            
+            console.log("here1");
+            //image1
+            console.log(this.storageOfStartNode);
+
+            //Fills all but 4th imas index 3
+            for (let i = 0; i <= (5) ; i++ )
+            {      //all values but start move right to left replacing earlier node with farther along node
+                
+                ////////////////////////////////////////////////////////////////
+                vectorOfElements[i] = vectorOfElements[i+1];
+               
+            
+            }
+
+            vectorOfElements[5] = this.storageOfStartNode;
+
+            console.log("here");
+           
+
+
+            
+            //vectorOfElements[6] = "/image9.png";//this.storageOfStartNode;
+            console.log(vectorOfElements);
+
+            
+        }
+
+
+
+
+
+
+        readFirstFourValues()
+        {   //arange first four values for displaying images
+            for(i = 0 ; i<= 3 ; i++)
+            storageArray[i] = vectorOfElements[i];
+        }
+        displayFirstFourCharacters()
+        {
+            console.log(storageArray[0] + " " + storageArray[1] + " " + storageArray[2] + " " + storageArray[3]);
+            alert("stored");
+        }
+    }
+
+    let arrayClass = new vector();
+
+
+
+    //////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////
+    
+    console.log("C");
+
+    arrayClass.pushVector(a0);
+    console.log(vectorOfElements);
+    arrayClass.pushVector(a1);
+    console.log(arrayClass);
+    arrayClass.pushVector(a2);
+    console.log(arrayClass);
+    arrayClass.pushVector(a3);
+    console.log(arrayClass);
+    arrayClass.pushVector(a4);
+    console.log(arrayClass);
+    arrayClass.pushVector(a5);
+    console.log("here10");
+    console.log(arrayClass);
+    ///////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////
+
+
+function operations(){
+
+        //let arrayClass = new vector();
+
+
+
+        console.log(arrayClass);
+        arrayClass.moveElementsOfArrayLeft();
+        arrayClass.readFirstFourValues();
+        //console.log("Checking begins here");
+        arrayClass.displayFirstFourCharacters();
+        
+        //arrayClass.moveElementsOfArrayLeft();
+        //arrayClass.readFirstFourValues();
+        //arrayClass.displayFirstFourCharacters();
+}
+
+        /*
+
 
 
         if(i >= 4){

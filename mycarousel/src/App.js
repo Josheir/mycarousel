@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/components/navigation.component';
-
+import Navigation1 from './components/components/navigation.component';
+import ArrayPush1 from   './components/components/vector-left-component';
 
 
 
@@ -10,8 +10,9 @@ import Navigation from './components/components/navigation.component';
         
         
     <Routes>
-      <Route path='/' element={<Navigation />}>
-      <Route index element={<Navigation/>} />
+      <Route path='/' element={<div><ArrayPush1/><Navigation1/></div>}>
+      
+      
         </Route>
       </Routes>
   );
