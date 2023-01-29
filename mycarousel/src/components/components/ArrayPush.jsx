@@ -11,22 +11,8 @@ const ArrayPush = () => {
         
     <div >
     <br></br>
-    test
-    dfsffeeefefefeee
+    <h1>1</h1>
     
-    
-
-
-
-
-
-
-
-
-
-
-
-    jjjjjjjjjjjjjjjj
     </div>
     
     )

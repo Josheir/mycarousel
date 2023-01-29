@@ -1,21 +1,18 @@
 
 import './Carousel.css';
 
-//Display 4 images
-
-
 
 import React from 'react'
 import {useState} from 'react';
 
 
 let backgroundImage = new Array();
-backgroundImage[0] = './image1.png';
-backgroundImage[1] = './image2.png';
-backgroundImage[2] = './image3.png';
-backgroundImage[3] = './image4.png';
-backgroundImage[4] = './image5.png';
-backgroundImage[5] = './image6.png';
+backgroundImage[0] = './image1.jpg';
+backgroundImage[1] = './image2.jpg';
+backgroundImage[2] = './image3.jpg';
+backgroundImage[3] = './image4.jpg';
+backgroundImage[4] = './image5.jpg';
+backgroundImage[5] = './image6.jpg';
 
 
 var a0 = 0;
@@ -37,62 +34,13 @@ a3 = backgroundImage[i+3];
 a4 = backgroundImage[i+4];
 a5 = backgroundImage[i+5];
 a6 = backgroundImage[i+6];
-
-
-
-
-const MAXCOUNT = 100;
-
-        
-    let k = -1;
-    i = -1;
-
+   
     
-        console.log("B"); 
-        
-        
-        
-        i=i+1
+    i = -1;
+    i=i+1
         
 
-        function A0(){
-            a0 = backgroundImage[0];
-            console.log(i);
-            return(a0);
-        }
-
-        function A1(){
-            a1 = backgroundImage[1];
-            console.log(i);
-            return(a1);
-        }
-
-        function A2(){
-            a2 = backgroundImage[2];
-            console.log(i);
-            return(a2);
-        }
-
-        function A3(){
-            a3 = backgroundImage[3];
-            console.log(i);
-            return(a3);
-        }
-        function A4(){
-            a4 = backgroundImage[4];
-            console.log(i);
-            return(a4);
-        }
-
-       
-
-        a0 = A0();
-        a1= A1();
-        a2 = A2();
-        a3 = A3();
-
         
-
 
         
         let vectorOfElements= [] ;
@@ -136,8 +84,8 @@ const MAXCOUNT = 100;
         {
             let storedValue  = vectorOfElements[5];
            
-            for (let i = 5; i >= (0) ; i-- )
-            {      //all values but start move right to left replacing earlier node with farther along node
+            for (let i = this.getArrayLength(); i >= (0) ; i-- )
+            {      //all values but start move left to right replacing farther along node with earlier
                 
                
                 vectorOfElements[i+1] = vectorOfElements[i];
@@ -155,16 +103,12 @@ const MAXCOUNT = 100;
         {
             let arrayLength = this.getArrayLength();
             
-            
-            
-           alert(this.storageOfStartNode);
-
            
             
             
             let storedValue  = vectorOfElements[0];
             //Fills all but 4th imas index 3
-            for (let i = 0; i <= (5) ; i++ )
+            for (let i = 0; i <= (arrayLength-1) ; i++ )
             {      //all values but start move right to left replacing earlier node with farther along node
                 
                
@@ -175,20 +119,10 @@ const MAXCOUNT = 100;
 
             this.storageOfStartNode = '2';
            
-            vectorOfElements[5] = storedValue;
-            console.log("here");
+            vectorOfElements[(arrayLength-1)] = storedValue;
            
-            console.log(vectorOfElements);
-
-            
-
-            
+          
         }
-
-
-
-
-
 
         readFirstFourValues()
         {   //arange first four values for displaying images
@@ -197,7 +131,7 @@ const MAXCOUNT = 100;
         }
         displayFirstFourCharacters()
         {
-            console.log(a0 + "1 " + a1 + " " + a2 + " " + a3);
+            console.log(a0 + " " + a1 + " " + a2 + " " + a3);
            
             a0 = storageArray[0];
             a1 = storageArray[1];
@@ -208,11 +142,6 @@ const MAXCOUNT = 100;
     }
 
     let arrayClass = new vector();
-
-
-
-    
-    
     
     arrayClass.pushVector(a0);
     
@@ -235,7 +164,6 @@ function operations1(){
         console.log(arrayClass);
         arrayClass.moveElementsOfArrayLeft();
         arrayClass.readFirstFourValues();
-        
         arrayClass.displayFirstFourCharacters();
 
         
@@ -248,7 +176,6 @@ function operations2(){
     console.log(arrayClass);
     arrayClass.moveElementsOfArrayRight();
     arrayClass.readFirstFourValues();
-    
     arrayClass.displayFirstFourCharacters();
 
     
@@ -256,6 +183,21 @@ function operations2(){
 }
        
     
+//FETCH URLfetch('https://jsonplaceholder.typicode.com/todos').then(response => {
+
+fetch('http://localhost:3000/file.txt').then(response => {
+return response.json();
+}).then(data => {
+    
+    
+    
+    data.forEach(element => {
+        console.log(element.id)
+    });
+    //console.log(data);
+}).catch(err => {
+
+});
 
     
 
@@ -264,6 +206,10 @@ const Carousel = () => {
 
 const [counter, SetCounter] = React.useState('');
     
+
+
+
+  
 
 
 
