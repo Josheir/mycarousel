@@ -89,7 +89,7 @@ a6 = backgroundImage[i+6];
             alert(arrayLength);
             let storedValue  = vectorOfElements[(arrayLength-1)];
            
-            for (let i = (arrayLength-1); i >= (0) ; i-- )
+            for (let i = (arrayLength-2); i >= (0) ; i-- )
             {      //all values but start move left to right replacing farther along node with earlier
                 
                
