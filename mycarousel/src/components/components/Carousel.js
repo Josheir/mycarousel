@@ -82,53 +82,7 @@ const MAXCOUNT = 100;
         operations();
 
         
-        //console.log("here");
-        //console.log(i);
-
-    //k is either 1,2,3,or 0
-/*
-    if (k === 4)
-    {
-        k = 0;
-    }
-    else if (k === 5)
-    {
-        k =1 ;
-    } 
-    else if (k === 6)
-    {
-        k=2;
-    }
-    else if (k === 7)
-    {
-        k = 3;
-    }
-    */
-
-    /*
-    k = checkForMaxCount(k);
-    console.log(k);
-    a1 = backgroundImage[k];
-    
-    k = checkForMaxCount(k);
-    console.log(k);
-    a2 = backgroundImage[k];
-    
-    k = checkForMaxCount(k);
-    console.log(k);
-    a3 = backgroundImage[k];
-    
-    k = checkForMaxCount(k);
-    console.log(k);
-    a4 = backgroundImage[k];
-    
-    
-
-   
-    i=i+4;
-    k++;
-    
-*/
+ 
     }
         //i=i+4;
         console.log("B"); 
@@ -220,7 +174,33 @@ const MAXCOUNT = 100;
         }
         
         
-        
+        moveElementsOfArrayRight()
+        {
+            let storedValue  = vectorOfElements[0];
+            //Fills all but 4th imas index 3
+            for (let i = 0; i <= (5) ; i++ )
+            {      //all values but start move right to left replacing earlier node with farther along node
+                
+                ////////////////////////////////////////////////////////////////
+                vectorOfElements[i] = vectorOfElements[i+1];
+               
+            
+            }
+
+            this.storageOfStartNode = '2';
+            //vectorOfElements[5] = this.storageOfStartNode;
+            vectorOfElements[5] = storedValue;
+            console.log("here");
+           
+
+
+            
+            //vectorOfElements[6] = "/image9.png";//this.storageOfStartNode;
+            console.log(vectorOfElements);
+
+            
+
+        }
         
         
         moveElementsOfArrayLeft()
@@ -280,8 +260,13 @@ const MAXCOUNT = 100;
         }
         displayFirstFourCharacters()
         {
-            console.log(storageArray[0] + " " + storageArray[1] + " " + storageArray[2] + " " + storageArray[3]);
+            console.log(a0 + "1 " + a1 + " " + a2 + " " + a3);
             alert("stored");
+            a0 = storageArray[0];
+            a1 = storageArray[1];
+            a2 = storageArray[2];
+            a3 = storageArray[3];
+
         }
     }
 
@@ -313,80 +298,18 @@ const MAXCOUNT = 100;
 
 function operations(){
 
-        //let arrayClass = new vector();
-
-
-
+        
         console.log(arrayClass);
         arrayClass.moveElementsOfArrayLeft();
         arrayClass.readFirstFourValues();
         //console.log("Checking begins here");
         arrayClass.displayFirstFourCharacters();
+
+        //a0 = "./image3";
         
-        //arrayClass.moveElementsOfArrayLeft();
-        //arrayClass.readFirstFourValues();
-        //arrayClass.displayFirstFourCharacters();
 }
-
-        /*
-
-
-
-        if(i >= 4){
-            i=0;
-        }
-        a1 = backgroundImage[i];
-        console.log(i);
-
-        
-        
-        let a = "b";
-        i = `${a}`+ "test";
-
-        alert(i);
-        i=i+1
-        
-        if(i >= 4){
-            i=0;
-        }
-        a2 = backgroundImage[i];
-        console.log(i);
-
-
-
-        i=i+1
-        
-        if(i >= 4){
-            i=0;
-        }
-        a3 = backgroundImage[i];
-        console.log(i);
-
-        i=i+1
-        
-        if(i >= 4){
-            i=0;
-        }
-        a4 = backgroundImage[i];
-        console.log(i);
-        i++;
-
 
        
-        alert(i);
-
-        
-
-        //
-        console.log(a1); 
-        console.log(a2);
-        console.log(a3);
-        console.log(a4);
-        
-
-        
-}
-*/
     function checkForMaxCount(l){
        
         if (i >= (MAXCOUNT-1))
@@ -410,6 +333,16 @@ function operations(){
     }
     /////
 
+    function testfunc(){
+        testfunct2();
+            }
+    
+        function testfunct2(){
+    
+            a0 = "./image3";
+        }
+
+        
 const Carousel = () => {
 
 const [counter, SetCounter] = React.useState('');
@@ -421,9 +354,11 @@ return (
     
 <div className = "images" >
 
-{a1};  
+  
 
-<img className = "arrows arrow" src = "arrow-left.jpg" alt = "" onClick={() => {ClickedArrowLeft(); SetCounter('1');}} />
+<img className = "arrows arrow" src = "arrow-left.jpg" alt = "" onClick={() => {operations(); SetCounter(counter+1);}} />
+kkkk
+
 
 
 <img className = "images2 images" src = {a0} alt = "" />
