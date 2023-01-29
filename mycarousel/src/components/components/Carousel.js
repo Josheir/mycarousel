@@ -13,6 +13,7 @@ backgroundImage[2] = './image3.jpg';
 backgroundImage[3] = './image4.jpg';
 backgroundImage[4] = './image5.jpg';
 backgroundImage[5] = './image6.jpg';
+backgroundImage[6] = './image7.jpg';
 
 
 var a0 = 0;
@@ -80,11 +81,15 @@ a6 = backgroundImage[i+6];
         }
         
         
+
+        /////////////////////////////
         moveElementsOfArrayRight()
         {
-            let storedValue  = vectorOfElements[5];
+            let arrayLength = this.getArrayLength();
+            alert(arrayLength);
+            let storedValue  = vectorOfElements[(arrayLength-1)];
            
-            for (let i = this.getArrayLength(); i >= (0) ; i-- )
+            for (let i = (arrayLength-1); i >= (0) ; i-- )
             {      //all values but start move left to right replacing farther along node with earlier
                 
                
@@ -97,13 +102,14 @@ a6 = backgroundImage[i+6];
             
 
         }
+        ////////////////////////////
         
         
         moveElementsOfArrayLeft()
         {
             let arrayLength = this.getArrayLength();
             
-           
+           alert(arrayLength);
             
             
             let storedValue  = vectorOfElements[0];
@@ -131,17 +137,20 @@ a6 = backgroundImage[i+6];
         }
         displayFirstFourCharacters()
         {
-            console.log(a0 + " " + a1 + " " + a2 + " " + a3);
+            
            
             a0 = storageArray[0];
             a1 = storageArray[1];
             a2 = storageArray[2];
             a3 = storageArray[3];
 
+            console.log(a0 + " " + a1 + " " + a2 + " " + a3);
+
         }
     }
 
     let arrayClass = new vector();
+    
     
     arrayClass.pushVector(a0);
     
@@ -156,6 +165,27 @@ a6 = backgroundImage[i+6];
     arrayClass.pushVector(a5);
    
     
+
+/*
+
+//FETCH URLfetch('https://jsonplaceholder.typicode.com/todos').then(response => {
+//public
+fetch('http://localhost:3000/file.txt').then(response => {
+return response.json();
+}).then(data => {
+    
+    
+    
+    data.forEach(element => {
+        console.log(element.id);
+        arrayClass.pushVector(element.id);
+    });
+    //console.log(data);
+}).catch(err => {
+
+});
+
+*/
 
 
 function operations1(){
@@ -183,21 +213,7 @@ function operations2(){
 }
        
     
-//FETCH URLfetch('https://jsonplaceholder.typicode.com/todos').then(response => {
 
-fetch('http://localhost:3000/file.txt').then(response => {
-return response.json();
-}).then(data => {
-    
-    
-    
-    data.forEach(element => {
-        console.log(element.id)
-    });
-    //console.log(data);
-}).catch(err => {
-
-});
 
     
 
